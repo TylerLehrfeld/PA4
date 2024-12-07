@@ -1,9 +1,9 @@
-#include "Matrix.h"
+#include "./modules/Matrix.h"
 #include <Eigen/Dense>
 #include <vector>
-#include "Transform.h"
-#include "data_reader.h"
-#include "main-helpers.h"
+#include "./modules/Transform.h"
+#include "./modules/data_reader.h"
+#include "./modules/main-helpers.h"
 #include <string>
 #include <chrono>
 using std::vector;
@@ -62,7 +62,7 @@ int main() {
             total_slow_time += duration_cast<milliseconds>(slow_end - slow_start);
 
             auto fast_start = high_resolution_clock::now();
-            closest_point_on_mesh_fast(s_k, vertex_coordinates_list, triangle_indeces, input.get_num_triangles(), oct_tree);
+            closest_point_on_mesh_fast(s_k, vertex_coordinates_list, oct_tree);
             auto fast_end = high_resolution_clock::now();
             total_fast_time += duration_cast<milliseconds>(fast_end - fast_start);
         }

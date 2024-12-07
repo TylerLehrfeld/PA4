@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include "Matrix-test.h"
-#include "PointCloudTest.h"
-#include "Transform-test.h"
-#include "triangle-tests.h"
+#include "./test_files/Transform-test.h"
+#include "./test_files/PointCloudTest.h"
+#include "./test_files/Matrix-test.h"
+#include "./test_files/triangle-tests.h"
+#include "./test_files/ICP-test.h"
 
 using std::cout;
 using std::endl;
@@ -31,6 +32,9 @@ int main(int argc, char *argv[]) {
         }
         if(argument == "triangles") {
             testTriangleFunctions();
+        }
+        if(argument == "ICP") {
+            testICP();
         }
         
     }    

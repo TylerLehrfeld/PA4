@@ -5,7 +5,7 @@ CXX = g++
 PATHS = ./dependencies/eigen-3.4.0
 
 # Flags
-CXXFLAGS = -g -I $(PATHS)
+CXXFLAGS = -g -std=c++17 -I $(PATHS)
 
 
 # Program files

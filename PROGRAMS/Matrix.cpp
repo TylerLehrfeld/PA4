@@ -1,9 +1,8 @@
-#include "Matrix.h"
-
+#include "./modules/Matrix.h"
 #include <Eigen/Dense>
 #include <iostream>
+#include "./modules/helperFunctions.h"
 
-#include "helperFunctions.h"
 using std::cout;
 using std::endl;
 using std::vector;
@@ -152,6 +151,14 @@ double Matrix::magnitude() {
     }
     double sum = 0;
     for(int i = 0; i < ROWS; i++) {
+        sum += matrixArray[i] * matrixArray[i];
+    }
+    return std::sqrt(sum);
+}
+
+double Matrix::overallsize() {
+    double sum = 0;
+    for(int i = 0; i < ROWS*COLUMNS; i++) {
         sum += matrixArray[i] * matrixArray[i];
     }
     return std::sqrt(sum);

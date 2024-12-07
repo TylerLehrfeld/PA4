@@ -1,4 +1,5 @@
 I tested and ran this on an ubuntu machine with gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04).
+I compiled with -std=c++17
 I do not know how it will compile (or not) on other Operating systems.
 
 
@@ -7,7 +8,5 @@ I do not know how it will compile (or not) on other Operating systems.
 4. ./main
 5. call make test
 7. ./test matrix transform point-cloud triangles
-8. call make performance
-10. ./performance
 
 If make does not work, the executables should work in an ubuntu environment when executed within the PROGRAMS folder
